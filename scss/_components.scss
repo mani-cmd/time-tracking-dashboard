@@ -1,0 +1,214 @@
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    height: 45rem;
+    width: 23rem;
+    background-color: $card-component-background;
+    border-radius: 1.5rem;
+
+    &__name-section {
+        background-color: $profile-card-background;
+        height: 70%;
+        border-radius: inherit;
+
+        img {
+            width: 35%;
+            border: 3px solid $color-white;
+            border-radius: 50%;
+            margin-left: var(--margin-left);
+            margin-top: var(--margin-top);
+        }
+        .name-container {
+            margin-left: var(--margin-left);
+            margin-top: var(--margin-top);
+            span {
+                color: $color-secondary-text;
+                font-size: 1.6rem;
+            }
+
+            .name {
+                font-size: 3.5rem;
+                font-weight: 300;
+            }
+        }
+    }
+
+    &__options-section {
+        display: flex;
+        margin-left: var(--margin-left);
+        flex-grow: 1;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        padding: 1rem 0;
+
+        .option {
+            color: $card-component-background-hover;
+            padding: 1rem 0;
+            transition: color 0.2s ease;
+            cursor: pointer;
+
+            &.active,
+            &:hover {
+                color: $color-white;
+            }
+        }
+    }
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+    background-color: palevioletred;
+    border-radius: 1.5rem;
+    position: relative;
+    z-index: 1;
+    background-position: 90% -10%;
+    background-size: 7rem;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    &--info {
+        height: 80%;
+        width: 100%;
+        background-color: $card-component-background;
+        position: absolute;
+        top: 21%;
+        border-radius: 1.5rem;
+        z-index: 20;
+        transition: background 0.2s ease;
+
+        &:hover {
+            background-color: hsl(235, 46%, 35%);
+        }
+        &__title {
+            display: block;
+            margin: 2rem 3rem;
+            span {
+                font-weight: 500;
+            }
+            img {
+                float: right;
+                margin-top: 5px;
+                cursor: pointer;
+            }
+        }
+
+        .hours {
+            font-size: 3.5rem;
+            font-weight: 300;
+            margin: 2rem 3rem;
+        }
+        .last-info {
+            margin: 0rem 3rem;
+            margin-top: 1rem;
+            font-size: 1.6rem;
+            color: $color-secondary-text;
+        }
+    }
+
+    &.work {
+        @include card-underlay('../images/icon-work.svg', $work-card-underlay);
+    }
+
+    &.play {
+        @include card-underlay('../images/icon-play.svg', $play-card-underlay);
+    }
+    &.study {
+        @include card-underlay(
+            '../images/icon-study.svg',
+            $study-card-underlay
+        );
+    }
+    &.exercise {
+        @include card-underlay(
+            '../images/icon-exercise.svg',
+            $exercise-card-underlay
+        );
+
+        background-position: 90% 0%;
+    }
+
+    &.social {
+        @include card-underlay(
+            '../images/icon-social.svg',
+            $social-card-underlay
+        );
+    }
+    &.self-care {
+        @include card-underlay(
+            '../images/icon-self-care.svg',
+            $self-care-card-underlay
+        );
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .profile-card {
+        display: flex;
+        flex-direction: column;
+        width: 29rem;
+        height: 20rem;
+
+        &__name-section {
+            height: 70%;
+            display: grid;
+            flex-shrink: 0;
+            grid-template-columns: 1fr 3fr;
+            img {
+                width: 7.5rem;
+                align-self: flex-start;
+            }
+            .name-container {
+                margin-left: 2.5rem;
+                margin-top: 4rem;
+                .name {
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        &__options-section {
+            flex-grow: 0;
+            display: flex;
+            flex-direction: row;
+            margin-left: 0;
+        }
+    }
+
+    .card {
+        width: 29rem;
+        height: 14rem;
+
+        &--info {
+            &__title {
+                margin: 2rem 2rem 0 2rem;
+            }
+            &__hours-display {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                column-gap: 1.5rem;
+                .hours {
+                    margin: 1rem 0 0 2rem;
+                }
+                .last-info {
+                    margin: 0 0 0 0;
+                    // line-height: 7rem;
+                    // transform: translateY(2rem);
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+.attribution {
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+    a {
+        color: hsl(228, 45%, 44%);
+    }
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+
+        <title>Frontend Mentor | Time tracking dashboard</title>
+
+        <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+        <script defer type="module" src="./main.js"></script>
+    </head>
+    <body>
+        <main>
+            <div class="profile-card">
+                <div class="profile-card__name-section">
+                    <img src="./images/image-jeremy.png" alt="Jeremy" />
+                    <div class="name-container">
+                        <span>Report for</span>
+
+                        <h2 class="name" id="name">Jeremy Robson</h2>
+                    </div>
+                </div>
+                <div class="profile-card__options-section" id="option-list">
+                    <span class="option">Daily</span>
+                    <span class="option active">Weekly</span>
+                    <span class="option">Monthly</span>
+                </div>
+            </div>
+            <div class="cards-container">
+                <!-- Work -->
+                <div class="card work">
+                    <div class="card--info">
+                        <div class="card--info__title">
+                            <span>Work</span>
+                            <img src="./images/icon-ellipsis.svg" />
+                        </div>
+                        <div class="card--info__hours-display">
+                            <h2 class="hours">32hrs</h2>
+                            <p class="last-info">
+                                Last Week -
+                                <span class="pervious-hour">36hrs</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Play -->
+                <div class="card play">
+                    <div class="card--info">
+                        <div class="card--info__title">
+                            <span>Play</span>
+                            <img src="./images/icon-ellipsis.svg" />
+                        </div>
+                        <div class="card--info__hours-display">
+                            <h2 class="hours">10hrs</h2>
+                            <p class="last-info">
+                                Last Week -
+                                <span class="pervious-hour">8hrs</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Study -->
+                <div class="card study">
+                    <div class="card--info">
+                        <div class="card--info__title">
+                            <span>Study</span>
+                            <img src="./images/icon-ellipsis.svg" />
+                        </div>
+                        <div class="card--info__hours-display">
+                            <h2 class="hours">4hrs</h2>
+                            <p class="last-info">
+                                Last Week -
+                                <span class="pervious-hour">7hrs</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- exercise -->
+                <div class="card exercise">
+                    <div class="card--info">
+                        <div class="card--info__title">
+                            <span>Exercise</span>
+                            <img src="./images/icon-ellipsis.svg" />
+                        </div>
+                        <div class="card--info__hours-display">
+                            <h2 class="hours">4hrs</h2>
+                            <p class="last-info">
+                                Last Week -
+                                <span class="pervious-hour">5hrs</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Scoial -->
+                <div class="card social">
+                    <div class="card--info">
+                        <div class="card--info__title">
+                            <span>Social</span>
+                            <img src="./images/icon-ellipsis.svg" />
+                        </div>
+                        <div class="card--info__hours-display">
+                            <h2 class="hours">5hrs</h2>
+                            <p class="last-info">
+                                Last Week -
+                                <span class="pervious-hour">10hrs</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Self Care -->
+                <div class="card self-care">
+                    <div class="card--info">
+                        <div class="card--info__title">
+                            <span>Self Care</span>
+                            <img src="./images/icon-ellipsis.svg" />
+                        </div>
+                        <div class="card--info__hours-display">
+                            <h2 class="hours">2hrs</h2>
+                            <p class="last-info">
+                                Last Week -
+                                <span class="pervious-hour">2hrs</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="attribution">
+            Challenge by
+            <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                >Frontend Mentor</a
+            >. Coded by
+            <a target="blank" href="https://github.com/mani-cmd">Manikandan</a>.
+        </footer>
+    </body>
+</html>
